@@ -18,7 +18,9 @@ After an operator or while in Visual mode:
     im{char}
     am{char}
 
-or when {char} is CTRL-K
+searches left and right for {char} and selects the region in between.  `am` includes the 2nd {char}.
+
+It is possible to enter a digraph:
 
     im<C-K>{char1}{char2}
     am<C-K>{char1}{char2}
