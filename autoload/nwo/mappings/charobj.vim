@@ -101,16 +101,21 @@ func! <sid>GetChar() "{{{
 endfunc "}}}
 
 func! s:InputDigraph() "{{{
-    let chr1 = nwo#am#GetChar()
+    let chr1 = s:BasicGetChar()
     if chr1 ==# "\e"
         return ""
     endif
-    let chr2 = nwo#am#GetChar()
+    let chr2 = s:BasicGetChar()
     call inputsave()
     call feedkeys("\<C-K>". chr1. chr2. "\r", "n")
     let digchr = input('')
     call inputrestore()
     return digchr
 endfunc "}}}
+
+func! s:BasicGetChar()
+    let chr = getchar()
+    return chr != 0 ? nr2char(chr) : chr
+endfunc
 
 " vim:set et:
