@@ -50,13 +50,10 @@ Asking for a character does not put you in getchar-mode in the cmdline.
 Dot-repetition does not ask for a character again.
 
 ## Credits:
-Execute a vim motion on the "next" text object
-https://gist.github.com/AndrewRadev/1171559
-
-https://github.com/kana/vim-textobj-user
-
 thinca/vim-textobj-between: Text objects for a range between a character
 https://github.com/thinca/vim-textobj-between
+
+https://github.com/kana/vim-textobj-user
 
 ## License
 Copyright (c) Andy Wokula.  The Vim License applies.
