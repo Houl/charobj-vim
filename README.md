@@ -1,5 +1,5 @@
 # vim-charobj
-Yet another text-object delimited by given character script
+Yet another **text-object delimited by given character** script
 
 ## Installation
 Nothing special.
