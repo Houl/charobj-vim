@@ -55,5 +55,9 @@ https://github.com/thinca/vim-textobj-between
 
 https://github.com/kana/vim-textobj-user
 
+Paradigm: Patch to utilize undefined text-objects
+https://groups.google.com/forum/#!msg/vim_dev/pZxLAAXxk0M/rW_ic3O4YxEJ
+(still unofficial Vim patch from 2013)
+
 ## License
 Copyright (c) Andy Wokula.  The Vim License applies.
