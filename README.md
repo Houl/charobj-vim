@@ -3,6 +3,7 @@ Yet another text-object delimited by given character script
 
 ## Installation
 Nothing special.
+A not-too-old Vim is required (my gVim 7.3.420 fails to `.`-repeat correctly).
 
 ## Configuration
 Setting up keys in the vimrc:
