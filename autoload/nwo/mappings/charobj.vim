@@ -37,7 +37,7 @@ func! nwo#mappings#charobj#Select(ioa, char) "{{{
     if line == '' || a:char == ''
         return
     endif
-    let charpat = nwo#lib#MagicEscape(a:char)
+    let charpat = '\V'. escape(a:char, '\')
     let blnum = search(charpat, 'b', line('.'))
     let bcol = col('.')
 
