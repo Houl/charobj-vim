@@ -21,7 +21,8 @@ noremap <expr><silent> <SID>_i-char__      <sid>GetRhs('i', <sid>GetChar())
 
 func! <sid>GetRhs(ioa, gotcha) "{{{
     return printf(":\<C-U>call nwo#mappings#charobj#Select(%s, %s)\<CR>",
-        \ string(a:ioa), string(a:gotcha))
+        \ string(a:ioa), string(s:CmdlineEsc(a:gotcha)))
+    "endif
 endfunc "}}}
 
 func! nwo#mappings#charobj#OldSelect(ioa, char) "{{{
@@ -68,7 +69,11 @@ func! nwo#mappings#charobj#Select(ioa, char) "{{{
     endif
     if bcol >= 1
         call cursor('.', bcol)
-        normal! lv
+        if elnum == 0 && a:ioa ==# 'a' && cnt >= 2
+            normal! v
+        else
+            normal! lv
+        endif
     else
         call cursor('.', 1)
         normal! v
@@ -117,5 +122,13 @@ func! s:BasicGetChar()
     let chr = getchar()
     return chr != 0 ? nr2char(chr) : chr
 endfunc
+
+func! s:CmdlineEsc(str) "{{{
+    if a:str =~# '[[:cntrl:]]'
+        return substitute(a:str, '[[:cntrl:]]', "\<C-V>&", 'g')
+    else
+        return a:str
+    endif
+endfunc "}}}
 
 " vim:set et:

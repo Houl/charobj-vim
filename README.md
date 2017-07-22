@@ -4,6 +4,7 @@ Yet another **text-object delimited by given character** script
 ## Installation
 Nothing special.
 A not-too-old Vim is required (my gVim 7.3.420 fails to `.`-repeat correctly).
+Maybe has to do with Patch 7.4.171 .
 
 ## Configuration
 Setting up keys in the vimrc:
@@ -45,6 +46,8 @@ The region extends to the start or end of the line when there is no matching cha
 An existing Visual area is not extended, just redefined, using the start of the region.  This may or may not change, you can use the `f` keys to move around.
 
 When the region is empty between two occurrences of {char} and the cursor is on the 2nd {char}, then `im{char}` selects the 2nd {char}.  Makes sense when repeating a delete.
+
+'ignorecase' is used.
 
 ## Other Notes:
 Asking for a character does not put you in getchar-mode in the cmdline.
