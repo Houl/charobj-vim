@@ -49,10 +49,10 @@ When the region is empty between two occurrences of {char} and the cursor is on 
 
 'ignorecase' is used.
 
-## Other Notes:
+## Worthwhile to mention:
 Asking for a character does not put you in getchar-mode in the cmdline.
 
-Dot-repetition does not ask for a character again.
+`.`-repetition works *without* [repeat.vim](https://github.com/tpope/vim-repeat).
 
 ## Credits:
 thinca/vim-textobj-between: Text objects for a range between a character

@@ -69,7 +69,7 @@ func! nwo#mappings#charobj#Select(ioa, char) "{{{
     endif
     if bcol >= 1
         call cursor('.', bcol)
-        if elnum == 0 && a:ioa ==# 'a' && cnt >= 2
+        if elnum == 0 && a:ioa ==# 'a' && cnt >= 1
             normal! v
         else
             normal! lv
